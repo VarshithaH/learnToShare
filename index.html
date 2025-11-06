@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnToShare - Free Tutoring for Poor Students</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>LearnToShare</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#become-tutor" class="nav-link">Become a Tutor</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#request-help" class="nav-link">Request Help</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Free Tutoring for Students in Need</h1>
+                <p>Connecting volunteer tutors with students who need academic support in subjects like math, English, and more.</p>
+                <div class="hero-buttons">
+                    <a href="#become-tutor" class="btn btn-primary">Become a Tutor</a>
+                    <a href="#request-help" class="btn btn-secondary">Request Tutoring</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="abc.jpg" alt="Students Learning">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About LearnToShare</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Volunteer Powered</h3>
+                    <p>Our platform is built on the generosity of volunteer tutors who want to make a difference.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Multiple Subjects</h3>
+                    <p>We offer help in various subjects including Math, English, Science, and more.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Match based on availability to ensure convenient learning sessions for everyone.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Focused</h3>
+                    <p>Building stronger communities through education and shared knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutor Sign-up Form -->
+    <section id="become-tutor" class="form-section">
+        <div class="container">
+            <h2>Become a Volunteer Tutor</h2>
+            <form id="tutorForm" class="tutor-form">
+                <div class="form-group">
+                    <label for="tutorName">Full Name *</label>
+                    <input type="text" id="tutorName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tutorEmail">Email *</label>
+                    <input type="email" id="tutorEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tutorPhone">Phone Number</label>
+                    <input type="tel" id="tutorPhone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tutorSubjects">Subjects You Can Teach *</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="subjects" value="math"> Mathematics</label>
+                        <label><input type="checkbox" name="subjects" value="english"> English</label>
+                        <label><input type="checkbox" name="subjects" value="science"> Science</label>
+                        <label><input type="checkbox" name="subjects" value="history"> History</label>
+                        <label><input type="checkbox" name="subjects" value="programming"> Programming</label>
+                        <label><input type="checkbox" name="subjects" value="other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tutorAvailability">Availability *</label>
+                    <select id="tutorAvailability" name="availability" multiple required>
+                        <option value="weekday_morning">Weekday Mornings</option>
+                        <option value="weekday_afternoon">Weekday Afternoons</option>
+                        <option value="weekday_evening">Weekday Evenings</option>
+                        <option value="weekend_morning">Weekend Mornings</option>
+                        <option value="weekend_afternoon">Weekend Afternoons</option>
+                        <option value="weekend_evening">Weekend Evenings</option>
+                    </select>
+                    <small>Hold Ctrl/Cmd to select multiple options</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tutorExperience">Teaching Experience</label>
+                    <textarea id="tutorExperience" name="experience" rows="4" placeholder="Briefly describe your teaching experience..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Student Request Form -->
+    <section id="request-help" class="form-section">
+        <div class="container">
+            <h2>Request Tutoring Help</h2>
+            <form id="studentForm" class="student-form">
+                <div class="form-group">
+                    <label for="studentName">Student Name *</label>
+                    <input type="text" id="studentName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentAge">Age *</label>
+                    <input type="number" id="studentAge" name="age" min="5" max="18" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentGrade">Grade Level</label>
+                    <input type="text" id="studentGrade" name="grade" placeholder="e.g., 5th Grade">
+                </div>
+                
+                <div class="form-group">
+                    <label for="guardianEmail">Guardian Email *</label>
+                    <input type="email" id="guardianEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guardianPhone">Guardian Phone</label>
+                    <input type="tel" id="guardianPhone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentSubjects">Subjects Needed *</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="subjects" value="math"> Mathematics</label>
+                        <label><input type="checkbox" name="subjects" value="english"> English</label>
+                        <label><input type="checkbox" name="subjects" value="science"> Science</label>
+                        <label><input type="checkbox" name="subjects" value="history"> History</label>
+                        <label><input type="checkbox" name="subjects" value="programming"> Programming</label>
+                        <label><input type="checkbox" name="subjects" value="other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentAvailability">Preferred Availability *</label>
+                    <select id="studentAvailability" name="availability" multiple required>
+                        <option value="weekday_morning">Weekday Mornings</option>
+                        <option value="weekday_afternoon">Weekday Afternoons</option>
+                        <option value="weekday_evening">Weekday Evenings</option>
+                        <option value="weekend_morning">Weekend Mornings</option>
+                        <option value="weekend_afternoon">Weekend Afternoons</option>
+                        <option value="weekend_evening">Weekend Evenings</option>
+                    </select>
+                    <small>Hold Ctrl/Cmd to select multiple options</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentNeeds">Specific Learning Needs</label>
+                    <textarea id="studentNeeds" name="needs" rows="4" placeholder="Describe what specific help is needed..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="financialNeed">Financial Situation</label>
+                    <textarea id="financialNeed" name="financial_need" rows="3" placeholder="Briefly describe your financial situation..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-secondary">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@learntoshare.org</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Education Street, Learning City</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LearnToShare</h3>
+                    <p>Making quality education accessible to all students regardless of their financial situation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#become-tutor">Become a Tutor</a></li>
+                        <li><a href="#request-help">Request Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnToShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <i class="fas fa-check-circle success-icon"></i>
+            <h3>Success!</h3>
+            <p id="modalMessage">Your form has been submitted successfully.</p>
+            <button class="btn btn-primary" id="modalClose">Close</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+<!-- Hidden Chatbot -->
+<div id="chatbot-container" class="chatbot-hidden">
+    <div class="chatbot-header">
+        <h3>🧞‍♂️ Wisdom Genie</h3>
+        <button id="close-chatbot" class="close-btn">&times;</button>
+    </div>
+    <div id="chatbot-messages" class="chatbot-messages">
+        <div class="bot-message">
+            <p>🧞‍♂️ *Poof!* I am the Wisdom Genie! Rub my lamp and ask me anything about learning...</p>
+        </div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="chatbot-input" placeholder="Your wish is my command...">
+        <button id="send-message">Wish</button>
+        <button id="speak-response" title="Genie Speech">🔊</button>
+    </div>
+</div>
+
+<!-- Mysterious Genie Lamp -->
+<div id="genie-lamp" class="lamp-hidden">
+    <div class="lamp">
+        <div class="lamp-handle"></div>
+        <div class="lamp-body">
+            <div class="lamp-glow"></div>
+            <div class="smoke smoke-1"></div>
+            <div class="smoke smoke-2"></div>
+            <div class="smoke smoke-3"></div>
+        </div>
+        <div class="lamp-base"></div>
+    </div>
+    <div class="sparkle"></div>
+</div>
+<script>
+const genieLamp = document.getElementById("genie-lamp");
+const chatbot = document.getElementById("chatbot-container");
+const closeBtn = document.getElementById("close-chatbot");
+const sendBtn = document.getElementById("send-message");
+const input = document.getElementById("chatbot-input");
+const messages = document.getElementById("chatbot-messages");
+const speakBtn = document.getElementById("speak-response");
+const synth = window.speechSynthesis;
+
+// Toggle chatbot visibility
+genieLamp.addEventListener("click", () => chatbot.classList.toggle("chatbot-hidden"));
+closeBtn.addEventListener("click", () => chatbot.classList.add("chatbot-hidden"));
+
+// Send message
+sendBtn.addEventListener("click", () => {
+  const userText = input.value.trim();
+  if (!userText) return;
+  appendMessage(userText, "user");
+  input.value = "";
+  setTimeout(() => genieReply(userText), 500);
+});
+
+// Append chat message
+function appendMessage(text, sender) {
+  const msg = document.createElement("div");
+  msg.className = sender === "bot" ? "bot-message" : "user-message";
+  msg.innerHTML = `<p>${text}</p>`;
+  messages.appendChild(msg);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// Genie’s short intelligent replies
+function genieReply(text) {
+  const responses = [
+    "Keep learning — it's your magic power!",
+    "A wise student asks great questions!",
+    "Knowledge shared is knowledge doubled.",
+    "Believe in yourself, young scholar!"
+  ];
+  const reply = responses[Math.floor(Math.random() * responses.length)];
+  appendMessage("🧞‍♂️ " + reply, "bot");
+  speak(reply);
+}
+
+// Text to speech
+function speak(text) {
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.pitch = 1; utter.rate = 1;
+  synth.speak(utter);
+}
+
+// Speak last genie message manually
+speakBtn.addEventListener("click", () => {
+  const botMsgs = messages.querySelectorAll(".bot-message p");
+  if (botMsgs.length) speak(botMsgs[botMsgs.length - 1].innerText);
+});
+</script>
+
+</body>
+</html>
